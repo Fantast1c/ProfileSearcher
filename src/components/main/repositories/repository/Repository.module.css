@@ -1,0 +1,20 @@
+.repo{
+    height: 112px;
+    width: 877px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: forestgreen;
+}
+
+.repo_name{
+    height: 29px;
+    margin: 24px 32px 0 32px;
+    background-color: firebrick;
+}
+.repo_desc{
+    height: 19px;
+    margin: 0 32px 24px 32px;
+    background-color: firebrick;
+}

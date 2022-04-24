@@ -6,10 +6,10 @@ import NoRepositories from "./repositories/NoRepositories";
 
 const Main = () => {
     return (
-        <div className={style.main}>
+        <main className={style.main}>
             <Profile/>
-            <NoRepositories/>
-        </div>
+            <Repositories/>
+        </main>
     );
 };
 

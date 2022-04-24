@@ -1,0 +1,20 @@
+.repo_container{
+    max-height: 640px;
+    width: 877px;
+    margin: 28px 56px 28px 84px;
+}
+.repo_header{
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.repository_container{
+    height: 520px;
+    width: 877px;
+    background-color: cornflowerblue;
+}
