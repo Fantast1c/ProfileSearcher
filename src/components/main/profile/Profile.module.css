@@ -1,0 +1,61 @@
+.profile_container{
+    height: 100%;
+    width: 348px;
+}
+.profile{
+    height: 432px;
+    width: 292px;
+    margin: 40px 0 190px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+}
+
+.profile_photo{
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.profile_info{
+    height: 124px;
+    width: 292px;
+    background-color: hotpink;
+}
+
+.profile_info_name{
+    height: 34px;
+    max-width: 292px;
+    background-color: springgreen;
+}
+
+.profile_info_nick{
+    height: 29px;
+    max-width: 292px;
+    margin-top: 12px;
+    background-color:grey;
+}
+.profile_info_follow{
+    height: 24px;
+    width: 292px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile_info_follow_followers{
+    height: 24px;
+    width: 147px;
+    display: flex;
+    justify-content: space-between;
+    background-color: gold;
+}
+.profile_info_follow_following{
+    height: 24px;
+    width: 129px;
+    display: flex;
+    justify-content: space-between;
+    background-color: gold;
+}

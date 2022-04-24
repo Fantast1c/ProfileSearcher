@@ -1,0 +1,31 @@
+.no_profile{
+    height: 696px;
+    width: 100%;
+    background: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no_profile_element{
+    height: 165px;
+    width: 156px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text_style{
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    text-align: center;
+    color: #808080;
+
+}
+.no_user_icon{
+    margin-top: 17px;
+}

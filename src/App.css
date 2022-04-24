@@ -1,6 +1,5 @@
 .App {
-  width: 1366px;
-  height: 734px;
+  max-width: 1366px;
+  max-height: 734px;
   margin: 0 auto;
-  background-color: violet;
 }

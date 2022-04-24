@@ -15,7 +15,7 @@
 }
 .input input  {
     height: 24px;
-    width: 256px;
+    max-width: 256px;
     outline: 0;
     border: none;
     font-family: 'Inter', serif;

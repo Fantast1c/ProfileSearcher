@@ -1,0 +1,30 @@
+.initial_main{
+    height: 696px;
+    width: 100%;
+    background: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.initial_main_element{
+    height: 196px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text_style{
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    text-align: center;
+    color: #808080;
+}
+.start_icon{
+    margin-top: 22.92px;
+}
