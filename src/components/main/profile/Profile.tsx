@@ -1,15 +1,12 @@
-import React, {useEffect} from 'react';
 import style from './Profile.module.css'
 import followersIcon from '../../../icons/followers.svg'
 import followingIcon from '../../../icons/following.svg'
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {AppRootStateType} from "../../../redux/store";
 import {InitStateType} from "../../../redux/profile-reducer";
 
 const Profile = () => {
-    const dispatch = useDispatch()
     const state = useSelector<AppRootStateType,InitStateType>((state)=>state.profile)
-    console.log(state.profile.followers)
     return (
         <div className={style.profile_container}>
             <div className={style.profile}>

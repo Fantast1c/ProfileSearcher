@@ -15,14 +15,12 @@
     height: 280px;
     width: 280px;
     border-radius: 50%;
-    background-color: grey;
     overflow : hidden;
 }
 
 .profile_info{
     height: 124px;
     width: 292px;
-    background-color: hotpink;
 }
 
 .profile_info_name{
@@ -34,7 +32,6 @@
     font-size: 26px;
     line-height: 130%;
     color: #000000;
-    background-color: springgreen;
 }
 
 .profile_info_nick{
@@ -47,7 +44,6 @@
     font-size: 18px;
     line-height: 22px;
     color: #0064EB;
-    background-color:grey;
 }
 .profile_info_follow{
     height: 24px;
@@ -68,7 +64,6 @@
     font-size: 16px;
     line-height: 150%;
     color: #000000;
-    background-color: gold;
 }
 .profile_info_follow_following{
     height: 24px;
@@ -81,5 +76,4 @@
     font-size: 16px;
     line-height: 150%;
     color: #000000;
-    background-color: gold;
 }

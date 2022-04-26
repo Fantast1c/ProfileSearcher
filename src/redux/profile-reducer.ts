@@ -4,11 +4,7 @@ type setProfileAT = {
     type:"SET-PROFILE"
     payload:any
 }
-type setFollowersAT = {
-    type:"SET-FOLLOWERS"
-    payload:any
-}
-type unionType = setProfileAT | setFollowersAT
+type unionType = setProfileAT
 
 type profileType = {
     login:string
@@ -29,10 +25,6 @@ export const profileReducer = (state:InitStateType = initState, action: unionTyp
         case "SET-PROFILE": {
             return {...state, profile: action.payload}
         }
-        case "SET-FOLLOWERS":{
-            return {...state, followers_url: action.payload}
-        }
-
         default:
             return state
     }

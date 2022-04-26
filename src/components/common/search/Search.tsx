@@ -1,16 +1,14 @@
-import React, {ChangeEvent, KeyboardEvent, useEffect, useState} from 'react';
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import style from "./Search.module.css";
 import searchIcon from "../../../icons/search.svg";
-import { getProfileTC, InitStateType} from "../../../redux/profile-reducer";
-import {useDispatch, useSelector} from "react-redux";
-import {AppRootStateType} from "../../../redux/store";
+import { getProfileTC} from "../../../redux/profile-reducer";
+import {useDispatch} from "react-redux";
+import {getReposTC} from "../../../redux/repos-reducer";
 
 
 
 const Search = () => {
     const dispatch = useDispatch()
-    const state = useSelector<AppRootStateType,InitStateType>((state)=>state.profile)
-    console.log(state.profile.followers)
 
     const [title, setTitle] = useState("")
 
@@ -18,6 +16,8 @@ const Search = () => {
                 if (title.trim() !== "") {
                     // @ts-ignore
                     dispatch(getProfileTC(title));
+                    // @ts-ignore
+                    dispatch(getReposTC(title))
                     setTitle("");
                 }
             }
