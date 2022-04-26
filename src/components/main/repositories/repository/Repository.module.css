@@ -5,16 +5,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: forestgreen;
+    background: #FFFFFF;
+    border-radius: 6px;
 }
 
 .repo_name{
     height: 29px;
     margin: 24px 32px 0 32px;
-    background-color: firebrick;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #0064EB;
 }
 .repo_desc{
     height: 19px;
     margin: 0 32px 24px 32px;
-    background-color: firebrick;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
 }
