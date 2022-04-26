@@ -11,11 +11,10 @@ repo:{
 
 const Repository = (props:repoPropsType) => {
     const repo = props.repo
-    console.log("repos", props)
     return (
 
         <div className={style.repo}>
-            <div className={style.repo_name}><span>{repo.name}</span></div>
+            <div className={style.repo_name}><a href={repo.html_url} target="_blank">{repo.name}</a></div>
             <div className={style.repo_desc}><span>{repo.description}</span></div>
         </div>
     );

@@ -3,3 +3,10 @@
   max-height: 734px;
   margin: 0 auto;
 }
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color:inherit;
+}
