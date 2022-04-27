@@ -8,7 +8,7 @@ export const getProfileAPI = (userName:string) => {
 }
 
 export const getReposAPI = (userName:string) => {
-    return axios.get(`https://api.github.com/users/${userName}/repos`)
+    return axios.get(`https://api.github.com/users/${userName}/repos?per_page=${4}&page=${1}`)
         .then(response => {
             return response.data
         })

@@ -9,6 +9,7 @@ type reposType = {
     name:string
     description: string
     html_url:string
+    pageNumber:number
 }
 
 type unionType = setReposAT

@@ -18,7 +18,7 @@ const Repositories = () => {
                     <Repository repo = {repo}/>
                 )}
             </div>
-                <Paginator/>
+                <Paginator reposCount={reposCount}/>
         </div>
     );
 };
