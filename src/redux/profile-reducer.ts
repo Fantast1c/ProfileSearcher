@@ -13,15 +13,16 @@ type profileType = {
     name:string
     avatar_url:string
     html_url:string
+    public_repos:number
 }
 
 
 let initState = {
     profile: {} as profileType
 }
-export type InitStateType = typeof initState
+export type ProfileStateType = typeof initState
 
-export const profileReducer = (state:InitStateType = initState, action: unionType) => {
+export const profileReducer = (state:ProfileStateType = initState, action: unionType) => {
     switch (action.type) {
         case "SET-PROFILE": {
             return {...state, profile: action.payload}

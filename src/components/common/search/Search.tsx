@@ -2,13 +2,15 @@ import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import style from "./Search.module.css";
 import searchIcon from "../../../icons/search.svg";
 import { getProfileTC} from "../../../redux/profile-reducer";
-import {useDispatch} from "react-redux";
-import {getReposTC} from "../../../redux/repos-reducer";
+import {useDispatch, useSelector} from "react-redux";
+import {getReposTC, InitStateType, updateUserNameAC} from "../../../redux/repos-reducer";
+import {AppRootStateType} from "../../../redux/store";
 
 
 
 const Search = () => {
     const dispatch = useDispatch()
+    const state = useSelector<AppRootStateType,InitStateType>((state)=>state.repos)
 
     const [title, setTitle] = useState("")
 
@@ -17,7 +19,7 @@ const Search = () => {
                     // @ts-ignore
                     dispatch(getProfileTC(title));
                     // @ts-ignore
-                    dispatch(getReposTC(title))
+                    dispatch(getReposTC(title, state.pageNumber))
                     setTitle("");
                 }
             }
