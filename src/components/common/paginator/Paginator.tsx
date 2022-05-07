@@ -3,18 +3,17 @@ import style from './Paginator.module.css'
 import prevIcon from '../../../icons/left.svg'
 import nextIcon from '../../../icons/right.svg'
 import {useDispatch, useSelector} from "react-redux";
-import {getReposTC, InitStateType, setPageNumberAC} from "../../../redux/repos-reducer";
+import {getReposTC, ReposStateType, setPageNumberAC} from "../../../redux/repos-reducer";
 import {AppRootStateType} from "../../../redux/store";
 
 const Paginator = (reposCount:any) => {
     const dispatch = useDispatch()
-    const state = useSelector<AppRootStateType,InitStateType>((state)=>state.repos)
+    const state = useSelector<AppRootStateType,ReposStateType>((state)=>state.repos)
     const pageCount =   Math.ceil((reposCount.reposCount+1)/4)
 
     const handlePageClick = (data:any) =>{
         // @ts-ignore
         dispatch(getReposTC(state.userName, data.selected +1))
-        console.log(data.selected +1)
     }
 
     return (

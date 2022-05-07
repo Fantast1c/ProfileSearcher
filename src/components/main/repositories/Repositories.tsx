@@ -4,11 +4,12 @@ import Repository from "./repository/Repository";
 import Paginator from "../../common/paginator/Paginator";
 import {useSelector} from "react-redux";
 import {AppRootStateType} from "../../../redux/store";
-import {InitStateType} from "../../../redux/repos-reducer";
+import {ReposStateType} from "../../../redux/repos-reducer";
 import {ProfileStateType} from "../../../redux/profile-reducer";
 
+
 const Repositories = () => {
-    const reposState = useSelector<AppRootStateType,InitStateType>((state)=>state.repos)
+    const reposState = useSelector<AppRootStateType,ReposStateType>((state)=>state.repos)
     const profileState = useSelector<AppRootStateType,ProfileStateType>((state)=>state.profile)
     const reposCount = profileState.profile.public_repos
 

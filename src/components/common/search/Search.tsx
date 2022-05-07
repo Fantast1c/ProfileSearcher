@@ -1,16 +1,19 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import style from "./Search.module.css";
 import searchIcon from "../../../icons/search.svg";
-import { getProfileTC} from "../../../redux/profile-reducer";
+import {getProfileTC, ProfileStateType} from "../../../redux/profile-reducer";
 import {useDispatch, useSelector} from "react-redux";
-import {getReposTC, InitStateType, updateUserNameAC} from "../../../redux/repos-reducer";
+import {getReposTC, ReposStateType} from "../../../redux/repos-reducer";
 import {AppRootStateType} from "../../../redux/store";
+import {useNavigate} from "react-router-dom";
 
 
 
 const Search = () => {
+    const navigate =  useNavigate()
     const dispatch = useDispatch()
-    const state = useSelector<AppRootStateType,InitStateType>((state)=>state.repos)
+    const state = useSelector<AppRootStateType,ReposStateType>((state)=>state.repos)
+    const profileState = useSelector<AppRootStateType, ProfileStateType>((state)=>state.profile)
 
     const [title, setTitle] = useState("")
 
@@ -18,6 +21,7 @@ const Search = () => {
                 if (title.trim() !== "") {
                     // @ts-ignore
                     dispatch(getProfileTC(title));
+                    console.log("isEx:",profileState.isExist)
                     // @ts-ignore
                     dispatch(getReposTC(title, state.pageNumber))
                     setTitle("");
@@ -29,8 +33,16 @@ const Search = () => {
 
     const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
         if (e.code === 'Enter') {
+           // profileState.isExist ? navigate("/main"): navigate("/not_found")
+
             getProfile()
+
+           navigate("/main")
+
+
+
         }
+
     }
 
     return (

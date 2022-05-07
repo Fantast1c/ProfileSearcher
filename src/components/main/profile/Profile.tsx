@@ -5,9 +5,12 @@ import {useSelector} from "react-redux";
 import {AppRootStateType} from "../../../redux/store";
 import {ProfileStateType} from "../../../redux/profile-reducer";
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 const Profile = () => {
+   // const navigate = useNavigate()
     const state = useSelector<AppRootStateType,ProfileStateType>((state)=>state.profile)
+
     return (
         <div className={style.profile_container}>
             <div className={style.profile}>
@@ -26,7 +29,7 @@ const Profile = () => {
                 </div>
             </div>
         </div>
-    );
+    )
 };
 
 export default Profile;
