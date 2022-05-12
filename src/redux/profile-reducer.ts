@@ -5,10 +5,14 @@ type setProfileAT = {
     payload:any
 }
 type setToggleIsExistAT = {
-    type: "SET-TOGGLE-IS-EXIST"
+    type: "SET-TOGGLE-IS-FETCHING"
     isExist:boolean
 }
-type unionType = setProfileAT | setToggleIsExistAT
+type setLoaderAT = {
+    type: "SET-LOADER"
+    isFetching:boolean
+}
+type unionType = setProfileAT | setToggleIsExistAT | setLoaderAT
 
 type profileType = {
     login:string
@@ -23,7 +27,8 @@ type profileType = {
 
 let initState = {
     profile: {} as profileType,
-    isExist: false
+    isExist: false,
+    isFetching: false
 }
 export type ProfileStateType = typeof initState
 
@@ -32,8 +37,11 @@ export const profileReducer = (state:ProfileStateType = initState, action: union
         case "SET-PROFILE": {
             return {...state, profile: action.payload}
         }
-        case "SET-TOGGLE-IS-EXIST" : {
+        case "SET-TOGGLE-IS-FETCHING" : {
             return {...state, isExist: action.isExist}
+        }
+        case "SET-LOADER" : {
+            return {...state, isFetching: action.isFetching}
         }
         default:
             return state
@@ -41,11 +49,21 @@ export const profileReducer = (state:ProfileStateType = initState, action: union
 }
 
 export const setProfileAC = (payload:any) =>({type:"SET-PROFILE", payload})
-export const setToggleIsExistAC = (isExist:boolean) =>({type:"SET-TOGGLE-IS-EXIST", isExist})
+export const setToggleIsFetchingAC = (isExist:boolean) =>({type:"SET-TOGGLE-IS-FETCHING", isExist})
+export const setLoaderAC = (isFetching:boolean) =>({type:"SET-LOADER", isFetching})
 
 export const getProfileTC = (title:string) => async (dispatch:any) => {
-    dispatch(setToggleIsExistAC(false))
-    let response = await getProfileAPI(title)
-    dispatch(setToggleIsExistAC(true))
-    dispatch(setProfileAC(response))
+    dispatch(setLoaderAC(true))
+    dispatch(setToggleIsFetchingAC(false))
+    try{
+        let response = await getProfileAPI(title)
+        dispatch(setToggleIsFetchingAC(true))
+        dispatch(setProfileAC(response))
+        dispatch(setLoaderAC(false))
+    }catch (err:any){
+        dispatch(setLoaderAC(false))
+    }
+
+
+
 }

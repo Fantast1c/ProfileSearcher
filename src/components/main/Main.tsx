@@ -9,6 +9,7 @@ import {AppRootStateType} from "../../redux/store";
 import {ReposStateType} from "../../redux/repos-reducer";
 import {ProfileStateType} from "../../redux/profile-reducer";
 import NoProfile from "./profile/NoProfile";
+import Loader from "../common/loader/Loader";
 
 const Main = () => {
     const profileState = useSelector<AppRootStateType,ProfileStateType>((state)=>state.profile)

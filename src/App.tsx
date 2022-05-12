@@ -2,20 +2,20 @@ import React from 'react';
 import './App.css';
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
-import {Navigate, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import InitialMain from "./components/main/InitialMain";
 import NoProfile from "./components/main/profile/NoProfile";
-import NoRepositories from "./components/main/repositories/NoRepositories";
 import {useSelector} from "react-redux";
 import {AppRootStateType} from "./redux/store";
 import {ProfileStateType} from "./redux/profile-reducer";
-import Profile from "./components/main/profile/Profile";
+import Loader from "./components/common/loader/Loader";
 
 const App = () =>{
     const profileState = useSelector<AppRootStateType,ProfileStateType>((state)=>state.profile)
 
     return (
         <div className="App">
+            {profileState.isFetching ? <Loader/> : ""}
         <Header/>
         <Routes>
             <Route path="/" element={<InitialMain/>}/>

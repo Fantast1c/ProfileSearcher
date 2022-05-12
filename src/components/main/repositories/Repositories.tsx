@@ -18,7 +18,7 @@ const Repositories = () => {
             <div className={style.repo_header}><span>Repositories ({reposCount})</span></div>
             <div className={style.repository_container}>
                 {reposState.repos.map((repo)=>
-                    <Repository repo = {repo}/>
+                    <Repository repo = {repo} key={repo.name}/>
                 )}
             </div>
                 <Paginator reposCount={reposCount}/>
