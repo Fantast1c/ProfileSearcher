@@ -4,9 +4,6 @@
     margin: 24px 13px 0 0;
     display: flex;
     align-items: center;
-
-
-
 }
 .paginator_items{
     width: 180px;
@@ -21,7 +18,6 @@
     align-items: center;
     color: #808080;
 }
-
 .paginator_container{
     width: 180px;
     display: flex;
@@ -88,5 +84,4 @@
     display: flex;
     justify-content: center;
     color: #808080;
-
 }

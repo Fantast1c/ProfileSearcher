@@ -13,18 +13,17 @@ type updateUserNameAT = {
     type: "UPDATE-USER-NAME"
     userName:string
 }
+type setLoaderAT = {
+    type: "SET-REPOS-LOADER"
+    isFetching:boolean
+}
+type unionType = setReposAT | setPageNumberAT | updateUserNameAT | setLoaderAT
 
 type reposType = {
     name:string
     description: string
     html_url:string
 }
-type setLoaderAT = {
-    type: "SET-REPOS-LOADER"
-    isFetching:boolean
-}
-
-type unionType = setReposAT | setPageNumberAT | updateUserNameAT | setLoaderAT
 
 let initState = {
     repos: [] as Array<reposType>,
@@ -57,7 +56,7 @@ export const reposReducer = (state:ReposStateType = initState, action: unionType
 export const setReposAC = (payload:any) =>({type:"SET-REPOS", payload})
 export const setPageNumberAC = (pageNumber:number) => ({type:"SET-PAGE-NUMBER", pageNumber})
 export const updateUserNameAC = (userName:string) => ({type:"UPDATE-USER-NAME", userName})
-export const setReposLoaderAC = (isFetching:boolean) =>({type:"SET-LOADER", isFetching})
+export const setReposLoaderAC = (isFetching:boolean) =>({type:"SET-REPOS-LOADER", isFetching})
 
 export const getReposTC = (userName:string, pageNumber:number) => async (dispatch:any, getState:()=>AppRootStateType) => {
     dispatch(setReposLoaderAC(true))

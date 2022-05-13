@@ -24,7 +24,6 @@ type profileType = {
     public_repos:number
 }
 
-
 let initState = {
     profile: {} as profileType,
     isExist: false,

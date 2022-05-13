@@ -2,6 +2,7 @@
     max-height: 640px;
     width: 877px;
     margin: 28px 56px 28px 84px;
+    position: relative;
 }
 .repo_header{
     font-family: 'Inter', serif;
@@ -12,7 +13,6 @@
     color: #000000;
     margin-bottom: 5px;
 }
-
 .repository_container{
     height: 520px;
     max-width: 877px;

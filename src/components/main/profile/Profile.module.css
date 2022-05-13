@@ -10,19 +10,16 @@
     flex-direction: column;
     justify-content: space-between;
 }
-
 .profile_photo{
     height: 280px;
     width: 280px;
     border-radius: 50%;
     overflow : hidden;
 }
-
 .profile_info{
     height: 124px;
     width: 292px;
 }
-
 .profile_info_name{
     height: 34px;
     max-width: 292px;
@@ -33,7 +30,6 @@
     line-height: 130%;
     color: #000000;
 }
-
 .profile_info_nick{
     height: 29px;
     max-width: 292px;
@@ -52,7 +48,6 @@
     display: flex;
     justify-content: space-between;
 }
-
 .profile_info_follow_followers{
     height: 24px;
     width: 147px;

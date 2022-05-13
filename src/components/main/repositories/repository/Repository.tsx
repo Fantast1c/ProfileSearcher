@@ -1,20 +1,18 @@
-import React from 'react';
 import style from './Repository.module.css'
 
-type repoPropsType = {
-repo:{
-    name: string
-    description: string
-    html_url: string
-}
+type reposPropsType = {
+    repo: {
+        name: string
+        description: string
+        html_url: string
+    }
 }
 
-const Repository = (props:repoPropsType) => {
+const Repository = (props: reposPropsType) => {
     const repo = props.repo
     return (
-
         <div className={style.repo}>
-            <div className={style.repo_name}><a href={repo.html_url} target="_blank">{repo.name}</a></div>
+            <div className={style.repo_name}><a href={repo.html_url} target="_blank" rel="noreferrer">{repo.name}</a></div>
             <div className={style.repo_desc}><span>{repo.description}</span></div>
         </div>
     );

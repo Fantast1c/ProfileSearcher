@@ -10,29 +10,28 @@ import {useNavigate} from "react-router-dom";
 const Search = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const state = useSelector<AppRootStateType, ReposStateType>((state) => state.repos)
+    const reposState = useSelector<AppRootStateType, ReposStateType>((state) => state.repos)
     const profileState = useSelector<AppRootStateType, ProfileStateType>((state) => state.profile)
 
     const [title, setTitle] = useState("")
 
-    const getProfile = () => {
+    const getInfo = () => {
         if (title.trim() !== "") {
             // @ts-ignore
             dispatch(getProfileTC(title));
             console.log("isEx:", profileState.isExist)
             // @ts-ignore
-            dispatch(getReposTC(title, state.pageNumber))
+            dispatch(getReposTC(title, reposState.pageNumber))
             setTitle("");
         }
     }
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
     }
-
     const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
         if (e.code === 'Enter') {
             navigate("/main")
-            getProfile()
+            getInfo()
         }
     }
 

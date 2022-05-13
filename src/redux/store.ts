@@ -8,7 +8,6 @@ const rootReducer = combineReducers({
         repos:reposReducer
 })
 
-
 export const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export type AppRootStateType = ReturnType<typeof rootReducer>
