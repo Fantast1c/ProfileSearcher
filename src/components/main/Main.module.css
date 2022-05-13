@@ -1,6 +1,6 @@
 .main{
-    height: 696px;
-    width: 100%;
+    max-height: 696px;
+    max-width: 100%;
     background: #F9F9F9;
     display: flex;
 }

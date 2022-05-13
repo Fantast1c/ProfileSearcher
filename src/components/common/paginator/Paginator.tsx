@@ -10,6 +10,8 @@ const Paginator = (reposCount:any) => {
     const dispatch = useDispatch()
     const state = useSelector<AppRootStateType,ReposStateType>((state)=>state.repos)
     const pageCount =   Math.ceil((reposCount.reposCount+1)/4)
+    const startOfPage= (1+state.pageNumber*4) - 4
+    const endOfPage= (4+state.pageNumber*4) - 4
 
     const handlePageClick = (data:any) =>{
         // @ts-ignore
@@ -18,6 +20,7 @@ const Paginator = (reposCount:any) => {
 
     return (
         <div className={style.paginator}>
+            <div className={style.paginator_items}><span>{startOfPage}-{endOfPage} of {reposCount.reposCount} items</span></div>
             <ReactPaginate
                 pageCount={pageCount}
                 onPageChange={handlePageClick}
@@ -25,6 +28,7 @@ const Paginator = (reposCount:any) => {
                 nextLabel={'>'}
                 breakLabel={'...'}
                 marginPagesDisplayed={1}
+                pageRangeDisplayed={3}
                 containerClassName={style.paginator_container}
                 pageClassName={style.paginator_container_number}
                 pageLinkClassName={style.paginator_container_link}

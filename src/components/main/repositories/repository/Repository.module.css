@@ -1,6 +1,6 @@
 .repo{
     height: 112px;
-    width: 877px;
+    max-width: 877px;
     margin-top: 24px;
     display: flex;
     flex-direction: column;

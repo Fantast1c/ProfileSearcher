@@ -21,7 +21,8 @@ const Repositories = () => {
                     <Repository repo = {repo} key={repo.name}/>
                 )}
             </div>
-                <Paginator reposCount={reposCount}/>
+            <div className={style.paginator}><Paginator reposCount={reposCount}/></div>
+
         </div>
     );
 };

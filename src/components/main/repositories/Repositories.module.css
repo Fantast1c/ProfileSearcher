@@ -15,5 +15,9 @@
 
 .repository_container{
     height: 520px;
-    width: 877px;
+    max-width: 877px;
+}
+.paginator{
+    display: flex;
+    justify-content: flex-end;
 }
