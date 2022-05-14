@@ -29,7 +29,7 @@ const Search = () => {
         setTitle(e.currentTarget.value)
     }
     const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
-        if (e.code === 'Enter') {
+        if (e.code === 'Enter' && e.shiftKey+ "Enter") {
             navigate("/main")
             getInfo()
         }

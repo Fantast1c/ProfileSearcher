@@ -3,4 +3,5 @@
     max-width: 100%;
     background: #F9F9F9;
     display: flex;
+    flex-wrap: wrap;
 }

@@ -1,13 +1,14 @@
 .header{
     height: 72px;
-    min-width: 100%;
     background-color: #0064EB;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 .logo_icon{
+    width: 41px;
+    height: 40px;
     margin-left: 41px;
+    padding-right: 15px;
 }
 
 
