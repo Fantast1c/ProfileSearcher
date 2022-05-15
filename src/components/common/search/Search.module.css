@@ -1,7 +1,7 @@
 .input_wrapper{
     margin-right: 15px;
     height: 40px;
-    width: 500px;
+    width: 36.6%;
     background-color: #ffffff;
     border-radius: 6px;
     display: flex;
@@ -14,7 +14,7 @@
 }
 .input input  {
     height: 24px;
-    max-width: 500px;
+    width: 100%;
     outline: 0;
     border: none;
     font-family: 'Inter', serif;

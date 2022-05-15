@@ -1,7 +1,11 @@
+@media (max-width: 800px) {
+    .main {
+        flex-wrap: wrap;
+    }
+}
 .main{
     max-height: 696px;
     max-width: 100%;
     background: #F9F9F9;
     display: flex;
-    flex-wrap: wrap;
 }
