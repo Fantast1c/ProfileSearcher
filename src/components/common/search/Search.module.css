@@ -10,6 +10,7 @@
 .input_wrapper_elements{
     display:flex;
     align-items: center;
+    width: 100%;
     padding: 8px 14px 8px 14px;
 }
 .input input  {
@@ -27,5 +28,7 @@
     letter-spacing: 0.01em;
 }
 .search_icon{
-    padding: 5px 11px 5px 5px;
+    width: 24px;
+    height: 24px;
+    margin: 5px 11px 5px 5px;
 }

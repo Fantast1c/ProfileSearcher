@@ -1,14 +1,10 @@
-/*@media (max-width: 500px) {*/
-/*    .paginator_items{*/
-/*        width: 1px;*/
-/*    }*/
-/*}*/
 .paginator{
     height: 25px;
     width: 365px;
     margin: 24px 13px 0 0;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 .paginator_items{
     max-width: 180px;
@@ -89,4 +85,9 @@
     display: flex;
     justify-content: center;
     color: #808080;
+}
+@media (max-width: 800px) {
+    .paginator_items{
+        font-size: 12px;
+    }
 }

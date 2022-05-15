@@ -28,3 +28,8 @@
     line-height: 19px;
     color: #000000;
 }
+@media (max-width: 800px) {
+    .repo_desc{
+        font-size: 14px;
+    }
+}

@@ -4,21 +4,6 @@
     margin: 28px 56px 28px 84px;
     position: relative;
 }
-
-@media (max-width: 800px) {
-    .repo_container{
-        max-height: 640px;
-        width: 90%;
-        margin-left: 15px;
-        position: relative;
-        background: #F9F9F9;
-        margin-right: 15px;
-    }
-    .paginator{
-        display: flex;
-        justify-content: flex-start;
-    }
-}
 .repo_header{
     font-family: 'Inter', serif;
     font-style: normal;
@@ -35,4 +20,18 @@
 .paginator{
     display: flex;
     justify-content: flex-end;
+}
+@media (max-width: 800px) {
+    .repo_container{
+        max-height: 640px;
+        width: 90%;
+        margin-left: 15px;
+        position: relative;
+        background: #F9F9F9;
+        margin-right: 15px;
+    }
+    .paginator{
+        display: flex;
+        justify-content: flex-start;
+    }
 }
