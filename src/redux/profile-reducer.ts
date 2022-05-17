@@ -23,7 +23,6 @@ type profileType = {
     html_url:string
     public_repos:number
 }
-
 let initState = {
     profile: {} as profileType,
     isExist: false,
@@ -62,7 +61,4 @@ export const getProfileTC = (title:string) => async (dispatch:any) => {
     }catch (err:any){
         dispatch(setLoaderAC(false))
     }
-
-
-
 }

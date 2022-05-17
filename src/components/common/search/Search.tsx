@@ -1,7 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import style from "./Search.module.css";
 import searchIcon from "../../../icons/search.svg";
-import {getProfileTC, ProfileStateType} from "../../../redux/profile-reducer";
+import {getProfileTC} from "../../../redux/profile-reducer";
 import {useDispatch, useSelector} from "react-redux";
 import {getReposTC, ReposStateType} from "../../../redux/repos-reducer";
 import {AppRootStateType} from "../../../redux/store";
@@ -11,7 +11,6 @@ const Search = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const reposState = useSelector<AppRootStateType, ReposStateType>((state) => state.repos)
-    const profileState = useSelector<AppRootStateType, ProfileStateType>((state) => state.profile)
 
     const [title, setTitle] = useState("")
 
