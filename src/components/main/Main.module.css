@@ -1,11 +1,11 @@
 .main{
     max-height: 696px;
-    max-width: 100%;
     background: #F9F9F9;
     display: flex;
 }
 @media (max-width: 800px) {
     .main {
+        max-height: 100%;
         flex-wrap: wrap;
     }
 }

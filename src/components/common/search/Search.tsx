@@ -19,7 +19,6 @@ const Search = () => {
         if (title.trim() !== "") {
             // @ts-ignore
             dispatch(getProfileTC(title));
-            console.log("isEx:", profileState.isExist)
             // @ts-ignore
             dispatch(getReposTC(title, reposState.pageNumber))
             setTitle("");
@@ -37,9 +36,9 @@ const Search = () => {
 
     return (
         <div className={style.input_wrapper}>
-            <div className={style.input_wrapper_elements}>
-                <div className={style.search_icon}><img src={searchIcon} alt="search"/></div>
-                <div className={style.input}><input onChange={onChangeHandler} value={title}
+            <div className={style.search_icon}><img src={searchIcon} alt="search"/></div>
+            <div className={style.input_wrapper_element}>
+                <div className={style.input}><input  onChange={onChangeHandler} value={title}
                                                     onKeyPress={onKeyPressHandler} placeholder="Enter Github username"
                                                     type="text"/></div>
             </div>

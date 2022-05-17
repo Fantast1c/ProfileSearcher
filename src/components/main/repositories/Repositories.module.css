@@ -24,11 +24,10 @@
 @media (max-width: 800px) {
     .repo_container{
         max-height: 640px;
-        width: 90%;
-        margin-left: 15px;
+        width: 100%;
+        margin-left: 0;
         position: relative;
         background: #F9F9F9;
-        margin-right: 15px;
     }
     .paginator{
         display: flex;

@@ -1,17 +1,15 @@
 .input_wrapper{
     margin-right: 15px;
     height: 40px;
-    width: 36.6%;
+    max-width: 500px;
     background-color: #ffffff;
     border-radius: 6px;
     display: flex;
     align-items: center;
 }
-.input_wrapper_elements{
-    display:flex;
-    align-items: center;
+.input_wrapper_element{
     width: 100%;
-    padding: 8px 14px 8px 14px;
+    padding: 8px 14px 8px 0;
 }
 .input input  {
     height: 24px;
@@ -30,5 +28,14 @@
 .search_icon{
     width: 24px;
     height: 24px;
+    padding-left: 14px;
     margin: 5px 11px 5px 5px;
+}
+@media (max-width: 800px) {
+    .input_wrapper{
+        max-width: 100%;
+    }
+    .input input{
+        font-size: 12px;
+    }
 }

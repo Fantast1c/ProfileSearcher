@@ -27,13 +27,13 @@ const Paginator = (reposCount: any) => {
                 nextLabel={'>'}
                 breakLabel={'...'}
                 marginPagesDisplayed={1}
-                pageRangeDisplayed={3}
+                pageRangeDisplayed={2}
                 containerClassName={style.paginator_container}
                 pageClassName={style.paginator_container_number}
                 pageLinkClassName={style.paginator_container_link}
                 activeLinkClassName={style.paginator_container_active}
-                nextLinkClassName={style.paginator_container_next}
-                previousLinkClassName={style.paginator_container_prev}
+                nextLinkClassName={state.pageNumber === pageCount ? style.paginator_container_next_disable : style.paginator_container_next}
+                previousLinkClassName={state.pageNumber === startOfPage ? style.paginator_container_prev_disable : style.paginator_container_prev}
                 breakClassName={style.paginator_container_dotes}
             />
         </div>
