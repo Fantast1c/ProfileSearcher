@@ -32,18 +32,18 @@ const Search = () => {
             getInfo()
         }
     }
-    const onBlurHandler = () =>{
+    const onSearchHandler = () =>{
         navigate("/main")
         getInfo()
     }
 
     return (
         <div className={style.input_wrapper}>
-            <div className={style.search_icon}><img src={searchIcon} alt="search"/></div>
+            <div onClick={onSearchHandler} className={style.search_icon}><img src={searchIcon} alt="search"/></div>
             <div className={style.input_wrapper_element}>
                 <div className={style.input}><input  onChange={onChangeHandler} value={title}
                                                     onKeyPress={onKeyPressHandler} placeholder="Enter Github username"
-                                                     onBlur={onBlurHandler}
+                                                     onBlur={onSearchHandler}
                                                     type="text"/></div>
             </div>
         </div>
