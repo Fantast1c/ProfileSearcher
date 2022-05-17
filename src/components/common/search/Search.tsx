@@ -32,6 +32,10 @@ const Search = () => {
             getInfo()
         }
     }
+    const onBlurHandler = () =>{
+        navigate("/main")
+        getInfo()
+    }
 
     return (
         <div className={style.input_wrapper}>
@@ -39,6 +43,7 @@ const Search = () => {
             <div className={style.input_wrapper_element}>
                 <div className={style.input}><input  onChange={onChangeHandler} value={title}
                                                     onKeyPress={onKeyPressHandler} placeholder="Enter Github username"
+                                                     onBlur={onBlurHandler}
                                                     type="text"/></div>
             </div>
         </div>
